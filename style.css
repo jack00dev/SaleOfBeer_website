@@ -242,6 +242,57 @@ header .navbar {
     color: var(--secondary-color);
 }
 
+/* Collection section styling */
+
+.collection-section {
+    color: var(--white-color);
+    background: var(--dark-color);
+    padding: 50px 0 100px;
+}
+
+.collection-section .collection-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 110px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.collection-section .collection-list .collection-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100% / 3 - 110px);
+}
+
+.collection-section .collection-list .collection-item .collection-image {
+    max-width: 83%;
+    aspect-ratio: 1;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+.collection-section .collection-list .collection-item .name {
+    margin: 12px 0;
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-semibold);
+}
+
+.collection-section .collection-list .collection-item .text {
+    font-size: var(--font-size-m);
+}
+
+/* Responsive media query code for max width 1024px */
+@media (max-width: 1024px) {
+    .collection-section .collection-list .collection-item {
+        width: calc(100% / 3 - 60px);
+    }
+
+    .collection-section .collection-list {
+        gap: 60px;
+    }
+}
+
 /* Responsive media query code for max width 900px */
 @media (max-width: 900px) {
     :root {
@@ -334,5 +385,28 @@ header .navbar {
         height: 100%;
         max-width: 250px;
         aspect-ratio: 1;
+    }
+
+    .collection-section .collection-list .collection-item {
+        width: calc(100% / 2 - 30px);
+    }
+
+    .collection-section .collection-list {
+        gap: 30px;
+    }
+
+    .collection-section .collection-list .collection-item .collection-image {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 640px) {
+
+     .collection-section .collection-list {
+        gap: 60px;
+    }
+
+    .collection-section .collection-list .collection-item {
+        width: 100%;
     }
 }
